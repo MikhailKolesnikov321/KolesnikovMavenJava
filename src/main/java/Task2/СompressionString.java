@@ -4,21 +4,21 @@ import java.util.Scanner;
 
 public class СompressionString {
     public static String compress(String str) {
-        StringBuilder compressedstr = new StringBuilder();
+        StringBuilder compressedStr = new StringBuilder();
 
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
             count++;
             if (i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1)) {
-                compressedstr.append(str.charAt(i));
-                compressedstr.append(count);
+                compressedStr.append(str.charAt(i));
+                compressedStr.append("(");
                 count = 0;
             }
         }
-        if (compressedstr.length() > str.length()) {
+        if (compressedStr.length() > str.length()) {
             return str;
         }
-        String result = compressedstr.toString();
+        String result = compressedStr.toString();
         return result;
     }
 
