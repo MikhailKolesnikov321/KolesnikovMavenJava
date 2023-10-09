@@ -1,5 +1,6 @@
-package Task3;
+package Task3.i;
 
+import Task3.i.Sex;
 import lombok.Data;
 
 @Data

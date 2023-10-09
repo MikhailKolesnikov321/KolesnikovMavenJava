@@ -1,4 +1,4 @@
-package Task3;
+package Task3.i;
 
 public enum Sex {
     MAN,
