@@ -1,4 +1,4 @@
-package AnimalsTask1;
+package Task1;
 import lombok.Data;
 
 @Data
