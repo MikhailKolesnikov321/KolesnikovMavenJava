@@ -12,10 +12,12 @@ public class Main {
                 .sorted()
                 .collect(Collectors.toList());
         System.out.println(modifiedStr);
+        System.out.println("------------------");
         List<String> addStr = str.stream()
                 .map(s -> s + "_1")
                 .collect(Collectors.toList());
         System.out.println(addStr);
+        System.out.println("------------------");
         int[] intArray = str.stream()
                 .mapToInt(s -> Integer.parseInt(s.substring(1)))
                 .toArray();
@@ -27,6 +29,7 @@ public class Main {
                 .sorted()
                 .distinct()
                 .collect(Collectors.toList());
+        System.out.println("------------------");
         System.out.println(uniqueString);
     }
 }
