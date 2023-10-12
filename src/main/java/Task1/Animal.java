@@ -1,17 +1,17 @@
-package AnimalsTask1;
+package Task1;
 import lombok.Data;
 
 @Data
-public class Animals {
+public class Animal {
     private String animalName;
-    public Animals(String animalName){
+    public Animal(String animalName){
         this.animalName = animalName;
     }
     public void makeSound(){
         System.out.println("Звук животного");
     }
 }
-class Cat extends Animals {
+class Cat extends Animal {
     public Cat(String name) {
         super(name);
     }
@@ -22,7 +22,7 @@ class Cat extends Animals {
     }
 }
 
-class Dog extends Animals {
+class Dog extends Animal {
     public Dog(String name) {
         super(name);
     }
@@ -33,7 +33,7 @@ class Dog extends Animals {
     }
 }
 
-class Cow extends Animals {
+class Cow extends Animal {
     public Cow(String name) {
         super(name);
     }
