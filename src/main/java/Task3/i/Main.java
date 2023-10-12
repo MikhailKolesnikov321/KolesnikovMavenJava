@@ -20,11 +20,13 @@ public class Main {
                 .map(Students -> Students.getName() + " " + Students.getAge() + " " + Students.getSex())
                 .collect(Collectors.toList());
         System.out.println("Студенты, которым придет повестка:");
-        for (String s : filtredList) {
-            System.out.println(s);
-        }
+        filtredList.forEach(students -> System.out.println(students));
         List<String> workers = stud.stream()
-                .filter(Students -> ((Students.getAge() <= 55 && Students.getSex() == Sex.WOMAN) || (Students.getAge() <= 60 && Students.getSex() == Sex.MAN)) && Students.getAge() >= 18)
+                .filter(student -> {
+                    int age = student.getAge();
+                    Sex sex = student.getSex();
+                    return (age <= 55 && sex == Sex.WOMAN) || (age <= 60 && sex == Sex.MAN) && age >= 18;
+                })
                 .map(Students -> Students.getName() + " " + Students.getAge() + " " + Students.getSex())
                 .collect(Collectors.toList());
         long count = workers.size();

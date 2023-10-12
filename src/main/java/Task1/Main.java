@@ -2,9 +2,9 @@ package Task1;
 
 public class Main {
     public static void main(String[] args) {
-        Animals cat = new Cat("Barsik");
-        Animals dog = new Dog("Sharik");
-        Animals cow = new Cow("Burenka");
+        Animal cat = new Cat("Barsik");
+        Animal dog = new Dog("Sharik");
+        Animal cow = new Cow("Burenka");
 
         cat.makeSound();
         dog.makeSound();

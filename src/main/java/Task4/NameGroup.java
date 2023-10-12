@@ -19,9 +19,7 @@ public class NameGroup {
         list.add(worker1);
         list.add(worker2);
         list.add(worker3);
-        Comparator<Employes> nameComparator = Comparator.comparing(Employes::getName);
 
-        list.sort(nameComparator);
         Map<String , List<Employes>> groupByName = list.stream()
                 .collect(Collectors.groupingBy(Employes::getName));
         System.out.println(groupByName);

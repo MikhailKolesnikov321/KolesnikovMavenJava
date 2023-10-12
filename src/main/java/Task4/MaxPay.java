@@ -1,5 +1,6 @@
 package Task4;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -7,18 +8,12 @@ import java.util.Comparator;
 import java.util.List;
 
 @Data
+@AllArgsConstructor
 public class MaxPay {
     private String name;
     private double pay;
     private int age;
     private int experience;
-
-    MaxPay(String name, double pay, int age, int experience) {
-        this.name = name;
-        this.age = age;
-        this.pay = pay;
-        this.experience = experience;
-    }
 
     public static void main(String[] args) {
         MaxPay worker1 = new MaxPay("Ivan", 80000.0, 25, 5);
